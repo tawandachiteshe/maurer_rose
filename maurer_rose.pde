@@ -1,9 +1,9 @@
 
-float d = 6;
-float n = 69;
+float d = 71;
+float n = 6;
 
 void setup(){
- size(400,400);
+ size(600,600);
 }
 
 
@@ -13,9 +13,9 @@ void draw(){
   stroke(255);
   noFill();
   beginShape();
-  for(int i = 0; i < 361; i++){
+  for(float i = 0; i < TWO_PI; i+= (TWO_PI/360)){
     float k = i * d;
-    float r = 150 * sin(n*k);
+    float r = 250 * sin(n*k);
     float x = r * cos(k);
     float y = r * sin(k);
     vertex(x,y);
@@ -23,13 +23,13 @@ void draw(){
   }
   endShape(CLOSE);
   
-  stroke(255,0,255,100);
+  stroke(0,0,255);
   noFill();
   strokeWeight(2);
   beginShape();
-  for(int i = 0; i < 361; i++){
+  for(float i = 0; i < TWO_PI; i+= (TWO_PI/360)){
     float k = i;
-    float r = 150 * sin(n*k);
+    float r = 250 * sin(n*k);
     float x = r * cos(k);
     float y = r * sin(k);
     vertex(x,y);
